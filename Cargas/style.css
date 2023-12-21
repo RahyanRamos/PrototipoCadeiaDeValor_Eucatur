@@ -1,0 +1,246 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.cadeiaValor{
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.donoMacro{
+    display: flex;
+    position: absolute;
+}
+
+.infDono{
+    display: flex;
+}
+
+.infs{
+    display: flex;
+}
+
+.infProcesso p{
+    display: flex;
+    position: absolute;
+    top: 150px;
+}
+
+.infProcedimento p{
+    display: flex;
+    position: absolute;
+    top: 150px;
+    left: 290px;
+}
+
+.titulo{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1{
+    color: #292200;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.titulo hr{
+    margin-bottom: 30px;
+    margin-top: 15px;
+    border: 1px solid #ffd500;
+}
+
+.processos{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.procedimento{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardProcessos,
+.cardProcedimentos{
+    flex: 1;
+    padding: 5px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+h4{
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cardProcessos{
+    background-color: #a9973a;
+    border-radius: 8px;
+    min-width: 200px;
+    max-width: 200px;
+    margin-right: 30px;
+}
+
+.cardProcedimentos{
+    background-color: #f8e9a0;
+    color: #000;
+    backdrop-filter: blur(3px);
+    border-radius: 16px;
+    position: relative;
+    min-width: 50px;
+    max-width: 200px;
+    margin-right: 5px;
+}
+
+.escProcedimentos{
+    position: absolute;
+    display: none;
+    flex-direction: row;
+    width: 80%;
+    z-index: 10;
+    min-height: 75%;
+    height: auto;
+    margin: 2% 7%;
+    color: #000;
+    background-color: #FFF7F7;
+    border: 2px solid #ffe877;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.cardProcedimentos:hover + .escProcedimentos{
+    display: block;
+    align-items: center;
+}
+
+.escProcedimentos:hover{
+    display: block;
+    transform: scale(1.1);
+}
+
+p{
+    color: #000;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nomeProced{
+    color: #968429;
+    width: 28%;
+    text-align: center;
+}
+
+.atividade0,
+.atividade1{
+    height: auto;
+    color: #000;
+    width: 35%;
+    max-height: 45px;
+}
+
+.atividade0 p,
+.atividade1 p{
+    background-color: #cfbb56;
+    margin: 5px;
+    border-radius: 8px;
+    width: 80%;
+}
+
+.escopo0,
+.escopo1{
+    display: none;
+}
+
+.atividade0:hover ~ .escopo0,
+.escopo0:hover,
+.atividade1:hover ~ .escopo1,
+.escopo1:hover{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3px;
+    height: auto;
+    color: #000;
+    transition: 0.4s ease-in-out;
+    width: 70%;
+    top: 10px;
+    right: 10px;
+}
+
+.atividade0:hover p,
+.atividade1:hover p{
+    background-color: #8e803b;
+}
+
+.quadro {
+    border: 1px solid #514300;
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    max-height: 150px;
+    overflow: auto;
+}
+
+.quaTitulo{
+    display: flex;
+    height: auto;
+    min-height: 25px;
+    background-color: #ffe770;
+    border: 2px solid #b3a351;
+    border-radius: 8px;
+    padding: 5px 0 0 0;
+    position: absolute;
+    width: 32.3%;
+}
+
+.quaTitulo h6{
+    top: 0px;
+    margin: 0;
+    font-size: 12px;
+}
+
+.quaTitulo img{
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
+
+.quaInf{
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+::-webkit-scrollbar{
+    width: 7px;
+}
+  
+::-webkit-scrollbar-thumb{
+    background-color: #b3a351;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .processos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardProcessos,
+    .cardProcedimentos {
+        width: 100%;
+        margin: 5px;
+    }
+}
